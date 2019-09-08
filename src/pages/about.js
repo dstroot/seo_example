@@ -1,15 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from "react";
 
-const About = () => (
-  <>
-    <Helmet>
-      <title>ABOUT PAGE</title>
-    </Helmet>
-    <div style={{background: 'red'}}>
-      ABOUT PAGE
-    </div>
-  </>
-)
+const About = () => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • About`;
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+  });
+
+  return <div style={{ background: "red" }}>ABOUT PAGE</div>;
+};
 
 export default About;

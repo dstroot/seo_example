@@ -33,3 +33,8 @@ function App() {
 }
 
 export default App;
+
+/**
+ * https://www.reddit.com/r/reactjs/comments/9p4wxj/i_have_yet_to_see_a_complete_answer_to_this/
+ * https://robsturcke.dev/react-seo-2019
+ */

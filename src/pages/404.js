@@ -1,17 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from "react";
 
+const PageNotFound = () => {
+  // Set the page title using the useEffect hook
+  useEffect(() => {
+    document.title = `Verite Data Science • 404`;
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+  });
 
-const PageNotFound = () => (
-  <>
-    <Helmet>
-      <title>404 Page Not Found</title>
-    </Helmet>
+  return (
     <span>
       <h1>404 Page Not Found</h1>
       <p>Sorry, this page is nonexistent.</p>
     </span>
-  </>
-);
+  );
+};
 
 export default PageNotFound;
